@@ -1,9 +1,11 @@
 FROM public.ecr.aws/docker/library/openjdk:8-jre-slim
 
 RUN mkdir /app
+
 WORKDIR /app
 
 COPY target/*.jar /app/
+
 EXPOSE 8080
 
 RUN printf "#!/bin/sh \n\
