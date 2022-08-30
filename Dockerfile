@@ -10,4 +10,5 @@ RUN printf "#!/bin/sh \n\
 exec /usr/local/openjdk-8/bin/java -jar %s\n" "$(ls /app/*.jar)"\
  > /app/entrypoint.sh \
  && chmod u+x /app/entrypoint.sh
+ 
 ENTRYPOINT ["/bin/sh","/app/entrypoint.sh"]
